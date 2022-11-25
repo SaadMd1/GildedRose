@@ -6,19 +6,21 @@ namespace GildedRose
     public class Shop
     {
 
-        public List<Item> items;
+        public ItemsRepository itemsRepository; 
 
-        public Shop(List<Item> items)
+        public Shop(ItemsRepository itemsRepository)
         {
-            this.items = items;
+            this.itemsRepository = itemsRepository;
         }
 
         public void UpdateQuality()
         {
+            var items= this.itemsRepository.GetInventory();
             foreach(Item i in items)
             {
                 i.Update();
             }
+            this.itemsRepository.SaveInventory(items);
         }
     }
 }
