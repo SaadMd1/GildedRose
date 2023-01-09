@@ -23,7 +23,10 @@ namespace GildedRose.Tests
             Console.WriteLine(lines[0]);*/
           
 
-            this.itemsRepository = new InMemoryItemsRepository();
+           /* this.itemsRepository = new InMemoryItemsRepository();
+            this.shop = new Shop(this.itemsRepository);*/
+
+            this.itemsRepository = new FileItemsRepository();
             this.shop = new Shop(this.itemsRepository);
 
         }

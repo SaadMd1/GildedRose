@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,10 @@ namespace GildedRose
      *pour chaque type il faut creer une classe qui hérite de Item
      *
      */
+    //[Table("Item")]
     public abstract class Item
     {
+        //[Column("test")]
         protected string name;
         protected int sellIn;
         protected int quality;

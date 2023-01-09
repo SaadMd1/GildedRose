@@ -10,6 +10,9 @@ namespace GildedRose
     {
         public GenericItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {
+           /* this.Name = name;
+            this.SellIn = sellIn;
+            this.Quality = quality;*/
         }
 
         public override void Update()
